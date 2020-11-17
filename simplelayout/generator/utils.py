@@ -23,5 +23,6 @@ def save_fig(matrix, file_name):
 
 def make_dir(outdir):
     # TODO: 当目录 outdir 不存在时创建目录
-    Path.mkdir(outdir)
+    path = Path(outdir)
+    Path.mkdir(path)
 
