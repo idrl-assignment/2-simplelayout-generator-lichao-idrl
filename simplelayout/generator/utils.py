@@ -17,12 +17,12 @@ def save_matrix(matrix, file_name):
 def save_fig(matrix, file_name):
     # TODO: 将 matrix 画图保存到 file_name.jpg
     plt.imshow(matrix)
+    file_name = file_name + '.jpg'
     plt.savefig(file_name)
 
 
 
 def make_dir(outdir):
     # TODO: 当目录 outdir 不存在时创建目录
-    path = Path(outdir)
-    Path.mkdir(path)
+    Path.mkdir(outdir)
 
