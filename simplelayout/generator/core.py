@@ -20,7 +20,7 @@ def generate_matrix(
     Returns:
         np.ndarray: 布局矩阵
     """
-    nd_array = np.array([board_grid, unit_grid, unit_n, positions])
+    nd_array = np.array((board_grid, unit_grid, unit_n, positions))
 
     return nd_array
    # TODO: 实现布局矩阵的生成
