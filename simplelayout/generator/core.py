@@ -6,6 +6,7 @@
 import numpy as np
 
 
+
 def generate_matrix(
     board_grid: int, unit_grid: int, unit_n: int, positions: list
 ) -> np.ndarray:
@@ -19,4 +20,17 @@ def generate_matrix(
     Returns:
         np.ndarray: 布局矩阵
     """
-    raise NotImplementedError  # TODO: 实现布局矩阵的生成
+    Board=np.zeros((board_grid,board_grid))
+    Unit=np.ones((unit_grid,unit_grid))
+    Len=board_grid/unit_grid
+    num=np.size(positions)
+    for i in range(num):
+        row=int(positions[i]/Len)
+        row=int(row*unit_grid)
+        col=int((positions[i]%Len)*unit_grid)
+        Board[row:row+unit_grid,col-unit_grid:col]=Unit
+    
+    
+
+    return  Board
+   # TODO: 实现布局矩阵的生成
